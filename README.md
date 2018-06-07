@@ -64,6 +64,7 @@ On another terminal.
 
 - `cd blockchain-explorer`
 - Modify config.json to update network-config.
+	- Please note: for release-3.2 config.json is located in app/platform/fabric
 	- Change "fabric-path" to your fabric network path,
 	example: "/home/user1/workspace/fabric-samples" for the following keys: "tls_cacerts", "key", "cert".
 	- Final path for key "tls_cacerts" will be:  "/home/user1/workspace/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt".
@@ -88,12 +89,14 @@ protocol (`grpcs->grpc`) and port (`9051-> 9050`) in the peer url and remove the
 
 On another terminal.
 
-- `cd blockchain-explorer/app/test`
+- `cd blockchain-explorer/`
+- `npm install`
+- `cd app`
+- `npm install`
+- `cd test`
 - `npm install`
 - `npm run test`
-- `cd blockchain-explorer`
-- `npm install`
-- `cd client/`
+- `cd ../../client`
 - `npm install`
 - `npm test -- -u --coverage`
 - `npm run build`
